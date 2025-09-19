@@ -1,0 +1,19 @@
+default:
+  image: alpine:3.20
+  before_script:
+    - echo "CI for $CI_PROJECT_PATH on $CI_SERVER_HOST"
+build-job:
+  stage: build
+#  script:
+#    - cd linux-6.12.47
+#    - apk update && upgrade
+#    - apk add build-base linux-headers flex bison elfutils-dev openssl-dev bc perl bash
+#    - make -j 4
+#  artifacts:
+#    paths:
+#      - linux-6.12.47/arch/x86/boot/bzImage
+#      - linux-6.12.47/.config
+#  rules:
+#    - changes:
+#      - linux-6.12.47
+#      - .gitlab-ci.yml
